@@ -1,0 +1,16 @@
+zuul:
+  debug:
+    request: true
+  routes:
+    taobao-accounts:
+      sensitive-headers:
+      path: /platform/add-accounts/TAOBAO
+      url: forward:/
+    tmall-accounts:
+      sensitive-headers:
+      path: /platform/add-accounts/TMALL
+      url: forward:/
+  add-proxy-headers: false
+  host:
+    connect-timeout-millis: 10000 # starting the connection
+    socket-timeout-millis: 180000  # monitor the continuous incoming data flow
