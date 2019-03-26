@@ -37,7 +37,7 @@ public class IniService {
         logger.info("start to load config");
         int count = 0;
         try {
-            refresh(ResourceUtils.getResourceAsStream("src/main/resources.local/jdbc.properties"));
+            refresh(ResourceUtils.getResourceAsStream("jdbc.properties"));
         } catch (IOException e) {
             e.printStackTrace();
             logger.info("fail to refresh because of:{}", e);
